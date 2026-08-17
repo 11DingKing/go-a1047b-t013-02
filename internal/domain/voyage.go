@@ -111,7 +111,7 @@ func (v *Voyage) AllocateHold(bookingID string, cargo Cargo, now time.Time, hold
 		return ErrAlreadyConfirmed
 	}
 	if !v.CanAllocateHold(cargo.Type) {
-		return fmt.Errorf("voyage %s has no %s capacity left: %v", v.ID, cargo.Type, ErrNoCapacity)
+		return fmt.Errorf("voyage %s has no %s capacity left: %w", v.ID, cargo.Type, ErrNoCapacity)
 	}
 	v.Holds[bookingID] = HoldAllocation{
 		BookingID:   bookingID,
