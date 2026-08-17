@@ -1,0 +1,8 @@
+{
+  "port": 58594,
+  "store_path": "data/store.json",
+  "hold_duration": "2h",
+  "cutoff_threshold": "48h",
+  "port_change_window": "72h",
+  "scheduler_interval": "30s"
+}
